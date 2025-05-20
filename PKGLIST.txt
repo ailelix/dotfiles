@@ -1,5 +1,4 @@
 adobe-source-han-fonts
-adw-gtk-theme
 adwaita-qt5
 adwaita-qt6
 alacritty
@@ -38,7 +37,7 @@ geogebra-6-bin
 gimp
 go
 googledot-cursor-theme
-graphite-gtk-theme-black-normal-git
+graphite-gtk-theme-rimless-git
 grimblast-git
 gtk
 gtk2
@@ -64,6 +63,7 @@ neovim
 net-tools
 nmap
 nvtop
+nwg-look
 obs-studio
 obsidian
 okular
@@ -87,7 +87,7 @@ spotify
 sshfs
 starship
 steam
-tela-icon-theme-bin
+tela-icon-theme-git
 terminus-font
 thunar-shares-plugin
 thunderbird
