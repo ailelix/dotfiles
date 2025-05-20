@@ -1,0 +1,19 @@
+[user]
+	name = Felix Chen
+  email = felixchen531@gmail.com
+  signingkey = 9806FF55E01D6545
+[core]
+	filemode = false
+[commit]
+	gpgsign = true
+[tag]
+	forcesignannotated = true
+[color]
+	ui = auto
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
