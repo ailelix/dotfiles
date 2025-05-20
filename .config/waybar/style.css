@@ -1,0 +1,228 @@
+/* Colors:
+BG: #1E2127
+Hover: #303238
+Disabled: #A9A9A9
+*/
+
+* {
+    border: none;
+    border-radius: 16px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-family: "Jetbrains Mono", "JetbrainsMono Nerd Font";
+}
+
+window#waybar {
+    padding: 0px;
+    background-color: transparent;
+}
+
+/* Custom/OS */
+#custom-os {
+    padding-left: 10px;
+    padding-right: 14px;
+
+    background-color: #1E2127;
+    color: #5277C3;
+    font-size: 22px;
+}
+#custom-os:hover {
+    background-color: #303238;
+}
+
+/* Hyprland/Workspaces */
+#workspaces {
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #1E2127;
+    font-size: 22px;
+} /* 4 + 6 = 10 */
+#workspaces button {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+#workspaces button.active {
+    color: #00B294;
+}
+
+/* MPRIS */
+#mpris {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #1E2127;
+    color: #00B294;
+    font-size: 22px;
+}
+#mpris.spotify {
+    color: #1DB954;
+}
+#mpris.firefox {
+    color: #FF7139;
+}
+#mpris.vlc {
+    color: #FF8800;
+}
+#mpris.mpv {
+    color: #6f1e6f;
+}
+
+/* Group/App */
+#apps {
+    background-color: #1E2127;
+}
+#taskbar button {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+#taskbar button.active {
+    padding-left: 6px;
+    padding-right: 6px;
+    border: 4px solid #00B294;
+}
+#tray {
+    padding-left: 6px;
+    padding-right: 6px;
+    border: 4px solid #5e5e5e;
+    background-color: #1E2127;
+}
+
+/* Group/Control */
+/* 10 Net 5+5 ... 5+5 IM 10 */
+#control {
+    background-color: #1E2127;
+}
+#network.control {
+    padding-left: 10px;
+    padding-right: 5px;
+    background-color: #1E2127;
+    font-size: 18px;
+}
+#network.control.disconnected {
+    color: #A9A9A9;
+}
+#network.control:hover {
+    background-color: #303238;
+}
+#bluetooth {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #1E2127;
+    font-size: 18px;
+}
+#bluetooth.disabled {
+    color: #A9A9A9;
+}
+#bluetooth:hover {
+    background-color: #303238;
+}
+#backlight {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #1E2127;
+    font-size: 18px;
+}
+#backlight:hover {
+    background-color: #303238;
+}
+#wireplumber {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #1E2127;
+    font-size: 18px;
+}
+#wireplumber:hover {
+    background-color: #303238;
+}
+#battery {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #1E2127;
+    font-size: 18px;
+}
+#battery.lowpower {
+    color: #FF7300;
+}
+#battery.critical {
+    color: #F01414;
+}
+#battery:hover {
+    background-color: #303238;
+}
+#custom-singbox {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 18px;
+}
+#custom-singbox.on {
+    color: #FF70AB;
+}
+#custom-singbox.off {
+    color: #A9A9A9;
+}
+#custom-singbox:hover {
+    background-color: #303238;
+}
+#custom-wireguard {
+    padding-left: 5px;
+    padding-right: 10px;
+    font-size: 18px;
+}
+#custom-wireguard.on {
+    color: #88171A;
+}
+#custom-wireguard.off {
+    color: #A9A9A9;
+}
+#custom-wireguard:hover {
+    background-color: #303238;
+}
+
+/* Group/Info */
+/* 6+4 CPU 4+4 Temp 4+4 Mem 4+4 Net 4+6 */
+/* 6+4 CPU 4+4 Temp 4+4 Mem 4+6 */
+#info {
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: #1E2127;
+}
+#cpu {
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #1E2127;
+}
+#cpu.light {
+    color: #61ff9b;
+}
+#cpu.medium {
+    color: #fbff8b;
+}
+#cpu.heavy {
+    color: #ff88a0;
+}
+#temperature {
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #1E2127;
+    color: #A8D8EA;
+}
+#temperature.critical {
+    color: #FF5555;
+}
+#memory {
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #1E2127;
+}
+#network.info {
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #1E2127;
+}
+
+/* Clock */
+#clock {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #1E2127;
+    font-size: 18px;
+}

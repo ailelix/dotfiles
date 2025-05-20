@@ -1,0 +1,208 @@
+{
+  "height": 32,
+  "layer": "top",
+  "margin": "5px, 10px, 0px, 10px",
+  "position": "top",
+  "spacing": 8,
+// Modules
+  "backlight": {
+    "format": "<span color=\"#FFCE00\">{icon}</span> {percent}%",
+    "format-icons": [
+      "󱩎",
+      "󱩏",
+      "󱩐",
+      "󱩑",
+      "󱩒",
+      "󱩓",
+      "󱩔",
+      "󱩕",
+      "󱩖",
+      "󰛨"
+    ],
+    "on-click": "wdisplays",
+    "on-scroll-down": "brightnessctl set -n5 2%-",
+    "on-scroll-up": "brightnessctl set +2%",
+    "reverse-scrolling": true,
+    "tooltip": false
+  },
+  
+  "battery": {
+    "format": "<span color=\"#07C160\">{icon}</span> {capacity}%",
+    "format-charging": "<span color=\"#07C160\">󰂄</span> {capacity}%",
+    "format-charging-critical": "󰂄 {capacity}%",
+    "format-charging-lowpower": "󰂄 {capacity}%",
+    "format-critical": "󱉞 {capacity}%",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "format-lowpower": "󰂃{capacity}%",
+    "format-time": "{H}h {M}min",
+    "interval": 30,
+    "on-click": "cpupower-gui",
+    "states": {
+      "critical": 15,
+      "lowpower": 30
+    },
+    "tooltip-format": "",
+    "tooltip-format-charging": "ETA {time}",
+    "tooltip-format-discharging": "Rate: {power:.1f}W\nETA {time}"
+  },
+  
+  "bluetooth": {
+    "format-connected": "<span color=\"#0082FC\">󰂱</span> {device_alias}",
+    "format-connected-battery": "<span color=\"#0082FC\">{icon}</span> {device_alias}",
+    "format-disabled": "󰂲",
+    "format-icons": [
+      "󰤾",
+      "󰤿",
+      "󰥀",
+      "󰥁",
+      "󰥂",
+      "󰥃",
+      "󰥄",
+      "󰥅",
+      "󰥆",
+      "󰥈"
+    ],
+    "format-on": "<span color=\"#0082FC\">󰂯</span>",
+    "max-length": 16,
+    "on-click": "blueman-manager",
+    "tooltip-format-connected-battery": "Battery: {device_battery_percentage}%"
+  },
+  
+  "clock": {
+    "calendar": {
+      "format": {
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>"
+      },
+      "mode": "year",
+      "mode-mon-col": 3,
+      "weeks-pos": "right"
+    },
+    "format": "{:%H:%M %a %d,%b}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>"
+  },
+  
+  "cpu": {
+    "format": " {usage}% {avg_frequency}Ghz",
+    "states": {
+      "heavy": 70,
+      "light": 0,
+      "medium": 40
+    },
+    "tooltip": false
+  },
+  
+  "memory": {
+//    "format": "<span foreground=\"#AA96DA\"> {used:.1f}/{total:.1f} GiB</span> <span foreground=\"#FFCEFE\"> {swapUsed:.1f}/{swapTotal:.1f} GiB</span>",
+    "format": "<span foreground=\"#AA96DA\">  {used:.1f}/{total:.1f} GiB</span>",
+    "tooltip": false
+  },   
+  
+  "network#control": {
+    "format-disconnected": "󰲜",
+    "format-ethernet": "<span color=\"#80F5D2\"> </span>{ifname}",
+    "format-wifi": "<span color=\"#43E55E\"> </span> {essid}",
+    "on-click": "nm-connection-editor",
+    "tooltip-format": "",
+    "tooltip-format-wifi": "Freq: {frequency}Ghz\nSignal: {signalStrength}%"
+  },
+  "network#info": {
+    "format": "<span foreground=\"#8EA7E9\"> {bandwidthUpBits}</span> <span foreground=\"#FFD3B4\"> {bandwidthDownBits}</span>",
+    "format-disconnected": "",
+    "interval": 10,
+    "tooltip": false
+  },   
+  
+  "temperature": {
+    "critical-threshold": 80,
+    "format": " {temperatureC}°C",
+    "format-critical": " {temperatureC}°C",
+    "hwmon-path": "/sys/class/hwmon/hwmon6/temp1_input",
+    "tooltip": false
+  },
+  
+  "tray": {
+    "icon-size": 22,
+    "spacing": 4
+  },
+  
+  "wireplumber": {
+    "format": "<span color=\"#7F52FF\">{icon}</span> {volume}%",
+    "format-icons": [
+      "",
+      " "
+    ],
+    "format-muted": "<span color=\"#7F52FF\"> </span> <s>{volume}%</s>",
+    "on-click": "pwvucontrol",
+    "on-click-right": "helvum",
+    "on-click-middle": "easyeffects",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 1%-",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_SINK@ 1%+ -l 1.0",
+    "reverse-scrolling": 1,
+    "tooltip-format": "{node_name}"
+  },
+  
+  "wlr/taskbar": {
+    "icon-size": 22,
+    "on-click": "activate"
+  },   
+  
+  "custom/os": {
+    "format": "",
+    "on-click": "fuzzel"
+  },
+// Groups
+  "group/apps": {
+    "modules": [
+      "wlr/taskbar",
+      "tray"
+    ],
+    "orientation": "horizontal"
+  },
+  "group/control": {
+    "modules": [
+      "network#control",
+      "bluetooth",
+      "backlight",
+      "wireplumber",
+      "battery"
+    ],
+    "orientation": "horizontal"
+  },
+  "group/info": {
+    "modules": [
+      "cpu",
+      "temperature",
+      "memory",
+      "network#info"
+    ],
+    "orientation": "horizontal"
+  },
+// Layout
+  "modules-center": [
+    "group/control"
+  ],
+  "modules-left": [
+    "custom/os",
+    "hyprland/workspaces",
+    "group/apps"
+  ],
+  "modules-right": [
+    "group/info",
+    "clock"
+  ]
+}

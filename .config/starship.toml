@@ -1,0 +1,73 @@
+format = "$username on $directory$git_branch$git_status$golang$nodejs$python$rust$java$c when $time\n$os[](fg:#00B294) "
+add_newline = false
+
+[c]
+format = " with [$symbol($version)]($style)"
+style = "fg:#A8B9CC"
+symbol = " "
+
+[directory]
+format = "[$path]($style)"
+style = "fg:#EF2D5E"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+Documents = "󰈙"
+Downloads = ""
+Music = ""
+Pictures = ""
+
+[git_branch]
+format = " via[ $symbol $branch]($style)"
+style = "fg:#F05032"
+symbol = ""
+
+[git_status]
+format = "[ \\[$all_status$ahead_behind\\]]($style)"
+style = "fg:#C71D23"
+
+[golang]
+format = " with [$symbol($version)]($style)"
+style = "fg:#00ADD8"
+symbol = "󰟓 "
+
+[java]
+format = " with [$symbol($version)]($style)"
+style = "fg:#D1AB66"
+symbol = " "
+
+[nodejs]
+format = " with [$symbol($version)]($style)"
+style = "fg:#339933"
+symbol = " "
+
+[os]
+disabled = false
+format = "[$symbol]($style)"
+style = "fg:#5277C3"
+
+[os.symbols]
+Arch = " "
+
+[python]
+format = " with [$symbol($version)]($style)"
+style = "fg:#3776AB"
+symbol = " "
+
+[rust]
+format = " with [$symbol($version)]($style)"
+style = "fg:#8669AE"
+symbol = " "
+
+[time]
+disabled = false
+format = "[ $time]($style)"
+style = "fg:#33658A"
+time_format = "%R"
+
+[username]
+disabled = false
+format = "[$user]($style)"
+show_always = true
+style_user = "fg:#06C167"

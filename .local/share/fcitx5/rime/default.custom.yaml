@@ -1,0 +1,38 @@
+customization:
+  distribution_code_name: Weasel
+  distribution_version: 0.16.3
+  generator: "Rime::SwitcherSettings"
+  modified_time: "Fri Jan 24 12:34:51 2025"
+  rime_version: 1.11.2
+
+patch:
+  ascii_composer:
+    good_old_caps_lock: true
+    switch_key:
+      Caps_Lock: clear
+      Shift_L: noop
+      Shift_R: noop
+      Control_L: noop
+      Control_R: noop
+
+  switcher:
+    hotkeys:
+      - Control+grave
+    save_options:
+      - ascii_mode
+      - full_shape
+      - ascii_punct
+      - emoji #  See aurora_pinyin.custom.yaml
+      - s2t # 简繁转换，同上
+
+  key_binder:
+    bindings:
+      - {when: composing, accept: Left, send: Up }
+      - {when: composing, accept: Right, send: Down }
+      - {when: always, accept: Control+space, toggle: ascii_mode }
+      # - {when: always, accept: Control+Shift+space, toggle: full_shape }
+      - {when: always, accept: Control+Shift+F, toggle: s2t } # 简繁转换
+
+  menu/page_size: 9
+  schema_list:
+    - {schema: aurora_pinyin}

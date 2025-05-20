@@ -1,0 +1,42 @@
+patch:
+
+  reverse_lookup: # 关闭反查
+  recognizer/patterns/reverse_lookup: # 关闭反查绑键
+
+  # 添加 Emoji 和 简繁转换
+  switches/+:
+    - name: emoji
+      reset: 1
+      states: [ "💀", "😄" ]
+    - name: s2t
+      states: [ "简", "繁" ]
+  
+  engine/filters/+:
+    - simplifier@emoji
+    - simplifier@s2t
+  
+  emoji:
+    opencc_config: emoji.json
+    option_name: emoji
+    tips: none
+    inherit_comment: false
+  
+  s2t:
+    opencc_config: s2t.json # Rime安装自带s2t.json
+    option_name: s2t
+    tips: none
+    tags: [ abc, number, gregorian_to_lunar ] # 避免转换不应转换的内容
+
+  # 模糊拼音 in&ing en&eng
+  speller/algebra/+:
+    - derive/([ei])n$/$1ng/ # en -> eng, in -> ing
+    - derive/([ei])ng$/$1n/ # eng -> en, ing -> in
+
+  # 八股文 & 词典
+  grammar:
+    language: zh-hans-t-essay-bgw
+
+  translator:
+    dictionary: aurora_pinyin.extend
+    contextual_suggestions: true  # 开启八股文
+    initial_quality: 1.2          # 拼音的权重应该比英文大
