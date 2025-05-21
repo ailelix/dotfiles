@@ -45,27 +45,6 @@ window#waybar {
     color: #00B294;
 }
 
-/* MPRIS */
-#mpris {
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: #1E2127;
-    color: #00B294;
-    font-size: 22px;
-}
-#mpris.spotify {
-    color: #1DB954;
-}
-#mpris.firefox {
-    color: #FF7139;
-}
-#mpris.vlc {
-    color: #FF8800;
-}
-#mpris.mpv {
-    color: #6f1e6f;
-}
-
 /* Group/App */
 #apps {
     background-color: #1E2127;
@@ -146,34 +125,6 @@ window#waybar {
     color: #F01414;
 }
 #battery:hover {
-    background-color: #303238;
-}
-#custom-singbox {
-    padding-left: 5px;
-    padding-right: 5px;
-    font-size: 18px;
-}
-#custom-singbox.on {
-    color: #FF70AB;
-}
-#custom-singbox.off {
-    color: #A9A9A9;
-}
-#custom-singbox:hover {
-    background-color: #303238;
-}
-#custom-wireguard {
-    padding-left: 5px;
-    padding-right: 10px;
-    font-size: 18px;
-}
-#custom-wireguard.on {
-    color: #88171A;
-}
-#custom-wireguard.off {
-    color: #A9A9A9;
-}
-#custom-wireguard:hover {
     background-color: #303238;
 }
 

@@ -19,7 +19,7 @@
       "󱩖",
       "󰛨"
     ],
-    "on-click": "wdisplays",
+    "on-click": "nwg-displays",
     "on-scroll-down": "brightnessctl set -n5 2%-",
     "on-scroll-up": "brightnessctl set +2%",
     "reverse-scrolling": true,
