@@ -16,7 +16,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     event = "VeryLazy",
     build = ":TSUpdate",
-    config = function () 
+    config = function()
       require("nvim-treesitter.configs").setup(
         {
           ensure_installed = "all",
@@ -48,5 +48,14 @@ return {
   { -- Telescope fzf Extension
     "nvim-telescope/telescope-fzf-native.nvim",
     build = "make"
+  },
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {},
   }
 }

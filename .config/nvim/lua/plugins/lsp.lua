@@ -21,7 +21,7 @@ return {
         "pyright",
         "systemd_ls",
         "ts_ls",
-        "volar",
+        "vue_ls",
         "yamlls"
       },
       automatic_enable = true

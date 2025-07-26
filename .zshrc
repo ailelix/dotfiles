@@ -28,6 +28,10 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # End of Section
 
+# Zsh-SSH Plugin
+source ~/.local/share/zsh-ssh/zsh-ssh.zsh
+# End of Section
+
 # Powerlevel 10k
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # End of Section
