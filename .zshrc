@@ -57,6 +57,7 @@ bindkey "^[[3~" delete-char
 
 # Aliases
 alias shizuku="adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh"
+alias vivo_pcsuite="wine ~/.wine/drive_c/Program\ Files/pcsuite/pcsuite.exe"
 alias ll="exa -alhb"
 alias ff="fastfetch --config $HOME/.config/fastfetch/config.jsonc"
 alias vim="nvim"

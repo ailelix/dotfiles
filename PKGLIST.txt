@@ -12,6 +12,7 @@ bind
 blueman
 bluez-utils
 brightnessctl
+brother-dcpl2535dw
 btop
 cherry-studio-bin
 cliphist
@@ -36,6 +37,7 @@ fcitx5-theme-wechat
 fzf
 geogebra-6-bin
 gimp
+git-lfs
 go
 googledot-cursor-theme
 graphite-gtk-theme-rimless-git
@@ -43,7 +45,7 @@ grimblast-git
 gtk
 handbrake
 helvum
-howdy-beta-git
+howdy-git
 hypridle
 hyprpaper
 hyprpolkitagent
@@ -56,8 +58,10 @@ linuxqq
 lsp-plugins
 luarocks
 motrix-bin
+mtpfs
 mtr
 nali-go-bin
+naps2-bin
 neovim
 net-tools
 nmap
@@ -95,6 +99,8 @@ sshfs
 starship
 steam
 strace
+swayosd
+sysbench
 tcping
 tela-icon-theme-git
 termdown
@@ -106,6 +112,8 @@ tor-browser-bin
 ttf-jetbrains-mono
 ttf-lxgw-wenkai
 unciv-bin
+uv
+vinagre
 visual-studio-code-bin
 waybar
 wdisplays
@@ -115,6 +123,7 @@ winetricks
 wireshark-qt
 wlroots0.18
 wordlists
+xarchiver
 xf86-video-amdgpu
 xone-dongle-firmware
 yadm
