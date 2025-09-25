@@ -163,7 +163,7 @@
   
   "custom/os": {
     "format": "",
-    "on-click": "fuzzel"
+    "on-click": "io.elementary.settings"
   },
 // Groups
   "group/apps": {

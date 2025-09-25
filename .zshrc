@@ -32,6 +32,10 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source ~/.local/share/zsh-ssh/zsh-ssh.zsh
 # End of Section
 
+# Zoxide
+eval "$(zoxide init --cmd cd zsh)"
+# End of Section
+
 # Powerlevel 10k
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # End of Section
