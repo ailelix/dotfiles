@@ -30,12 +30,6 @@ return {
     event = "VeryLazy",
     config = true,
   },
-  { -- Welcome Page
-    "goolord/alpha-nvim",
-    config = function()
-      require("alpha").setup(require("alpha.themes.dashboard").config)
-    end
-  },
   { -- Highlight other use of the word under current cursor
     "RRethy/vim-illuminate",
     event = "VeryLazy",

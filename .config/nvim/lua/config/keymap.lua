@@ -1,20 +1,20 @@
 vim.g.mapleader = " "
 local keymap = vim.keymap
 
--- Tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+-- tree
+keymap.set("n", "<leader>e", ":nvimtreetoggle<cr>")
 
--- Buffer
-keymap.set("n", "<leader><Tab>", "<cmd>bNext<CR>") -- Next Tab
-keymap.set("n", "<leader>bc", "<cmd>bd<CR>")       -- Close Tab
+-- buffer
+keymap.set("n", "<leader><tab>", "<cmd>bnext<cr>") -- next tab
+keymap.set("n", "<leader>bc", "<cmd>bd<cr>")       -- close tab
 
--- Which Key
+-- which key
 keymap.set({ "n", "v" }, "<leader>?",
   function() require("which-key").show({ global = false }) end,
-  { desc = "Buffer Local Keymaps (which-key)" }
+  { desc = "buffer local keymaps (which-key)" }
 )
 
--- Flash
+-- flash
 keymap.set({ "n", "x", "o" }, "s",
   function()
     require("flash").jump({
@@ -25,35 +25,50 @@ keymap.set({ "n", "x", "o" }, "s",
       }
     })
   end,
-  { desc = "Flash" }
+  { desc = "flash" }
 )
-keymap.set({ "n", "x", "o" }, "S", function() require("flash").treesitter() end, { desc = "Flash Treesitter" })
+keymap.set({ "n", "x", "o" }, "s", function() require("flash").treesitter() end, { desc = "flash treesitter" })
 
--- Telescope
+-- telescope
 local ts_ = require("telescope.builtin")
-keymap.set("n", "<leader>ff", ts_.find_files, { desc = "Telescope find files" })
-keymap.set("n", "<leader>fg", ts_.live_grep, { desc = "Telescope live grep" })
-keymap.set("n", "<leader><space>", ts_.buffers, { desc = "Telescope buffers" })
-keymap.set("n", "<leader>fh", ts_.help_tags, { desc = "Telescope help tags" })
+keymap.set("n", "<leader>ff", ts_.find_files, { desc = "telescope find files" })
+keymap.set("n", "<leader>fg", ts_.live_grep, { desc = "telescope live grep" })
+keymap.set("n", "<leader><space>", ts_.buffers, { desc = "telescope buffers" })
+keymap.set("n", "<leader>fh", ts_.help_tags, { desc = "telescope help tags" })
 
--- LSP
+-- Mini Suite
+keymap.set("n", "<leader>/", function()
+    require("mini.comment").toggle_lines(vim.fn.line("."), vim.fn.line("."))
+end, { desc = "Toggle current line comment" })
+keymap.set("v", "<leader>/", function()
+    local start_ = vim.fn.line("v")
+    local end_ = vim.fn.line(".")
+    if start_ > end_ then
+        start_, end_ = end_, start_
+    end
+    local esc_ = vim.api.nvim_replace_termcodes("<esc>", true, false, true)
+    vim.api.nvim_feedkeys(esc_, "nx", false)
+    require("mini.comment").toggle_lines(start_, end_)
+end, { desc = "Toggle comment for selection" })
+
+-- lsp
 local lsp_ = vim.lsp.buf
-keymap.set("n", "gD", lsp_.declaration, { desc = "LSP: Goto Declaration" })
-keymap.set("n", "gd", lsp_.definition, { desc = "LSP: Goto Definition" })
-keymap.set("n", "K", lsp_.hover, { desc = "LSP: Hover Documentation" })
-keymap.set("n", "gi", lsp_.implementation, { desc = "LSP: Goto Implementation" })
-keymap.set("n", "<C-k>", lsp_.signature_help, { desc = "LSP: Signature Documentation" })
-keymap.set("n", "<leader>rn", lsp_.rename, { desc = "LSP: Rename" })
-keymap.set("n", "<leader>ca", lsp_.code_action, { desc = "LSP: Code Action" })
-keymap.set("n", "<space>f", function() lsp_.format { async = true } end, { desc = "LSP: Format code" })
+keymap.set("n", "gd", lsp_.declaration, { desc = "lsp: goto declaration" })
+keymap.set("n", "gd", lsp_.definition, { desc = "lsp: goto definition" })
+keymap.set("n", "hd", lsp_.hover, { desc = "lsp: hover documentation" })
+keymap.set("n", "gi", lsp_.implementation, { desc = "lsp: goto implementation" })
+keymap.set("n", "<c-k>", lsp_.signature_help, { desc = "lsp: signature documentation" })
+keymap.set("n", "<leader>rn", lsp_.rename, { desc = "lsp: rename" })
+keymap.set("n", "<leader>ca", lsp_.code_action, { desc = "lsp: code action" })
+keymap.set("n", "<leader>fc", function() lsp_.format { async = true } end, { desc = "lsp: format code" })
 
-keymap.set("n", "<space>d", ts_.diagnostics, { desc = "LSP: Show Diagnostics" })
-keymap.set("n", "gr", ts_.lsp_references, { desc = "LSP: Goto References" })
+keymap.set("n", "<leader>d", ts_.diagnostics, { desc = "lsp: show diagnostics" })
+keymap.set("n", "gr", ts_.lsp_references, { desc = "lsp: goto references" })
 
--- Fine Command Line
-keymap.set("n", ":", "<cmd>FineCmdline<cr>", { desc = "Fine Command Line" })
+-- fine command line
+-- keymap.set("n", ":", "<cmd>finecmdline<cr>", { desc = "fine command line" })
 
--- Misc
-keymap.set("n", "<leader>sv", "<C-w>v") -- Vertical Split
+-- misc
+keymap.set("n", "<leader>sv", "<c-w>v") -- vertical split
 keymap.set("n", "<leader>sh", "<C-w>v") -- Horizontal Split
 
