@@ -199,6 +199,7 @@
   "modules-left": [
     "custom/os",
     "hyprland/workspaces",
+    /* "niri/workspaces", */
     "group/apps"
   ],
   "modules-right": [
