@@ -4,6 +4,8 @@
   "margin": "5px, 10px, 0px, 10px",
   "position": "top",
   "spacing": 8,
+
+
 // Modules
   "backlight": {
     "format": "<span color=\"#FFCE00\">{icon}</span> {percent}%",
@@ -19,7 +21,6 @@
       "󱩖",
       "󰛨"
     ],
-    /* "on-click": "nwg-displays", */
     "on-scroll-down": "brightnessctl set -n5 2%-",
     "on-scroll-up": "brightnessctl set +2%",
     "reverse-scrolling": true,
@@ -107,7 +108,6 @@
   },
   
   "memory": {
-//    "format": "<span foreground=\"#AA96DA\"> {used:.1f}/{total:.1f} GiB</span> <span foreground=\"#FFCEFE\"> {swapUsed:.1f}/{swapTotal:.1f} GiB</span>",
     "format": "<span foreground=\"#AA96DA\">  {used:.1f}/{total:.1f} GiB</span>",
     "tooltip": false
   },   
@@ -165,6 +165,16 @@
     "format": "",
     "on-click": "io.elementary.settings"
   },
+  "custom/hypridle": {
+    "format": "{}",
+    "exec": "~/.config/waybar/scripts/check-hypridle.sh",
+    "return-type": "json",
+    "on-click": "systemctl --user is-active hypridle && systemctl --user stop hypridle || systemctl --user start hypridle; pkill -SIGRTMIN+9 waybar",
+    "signal": 9,
+    "interval": 30,
+    "tooltip": true
+  },
+
 // Groups
   "group/apps": {
     "modules": [
@@ -192,6 +202,7 @@
     ],
     "orientation": "horizontal"
   },
+
 // Layout
   "modules-center": [
     "group/control"
@@ -199,8 +210,8 @@
   "modules-left": [
     "custom/os",
     "hyprland/workspaces",
-    /* "niri/workspaces", */
-    "group/apps"
+    "group/apps",
+    "custom/hypridle"
   ],
   "modules-right": [
     "group/info",

@@ -30,6 +30,25 @@ window#waybar {
     background-color: #303238;
 }
 
+/* Custom/hypridle */
+#custom-hypridle {
+    padding-left: 10px;
+    padding-right: 14px;
+
+    background-color: #1E2127;
+    font-size: 18px;
+}
+#custom-hypridle:hover {
+    background-color: #303238;
+}
+#custom-hypridle.active {
+    color: #a6e3a1;
+}
+#custom-hypridle.inactive {
+    color: #f38ba8;
+}
+
+
 /* Hyprland/Workspaces */
 #workspaces {
     padding-left: 4px;

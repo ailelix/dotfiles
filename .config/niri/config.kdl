@@ -125,7 +125,7 @@ hotkey-overlay {
     hide-not-bound
 }
 
-spawn-at-startup "waybar"
+// spawn-at-startup "waybar"
 spawn-at-startup "dunst"
 spawn-at-startup "fcitx5"
 spawn-at-startup "swayosd-server"
