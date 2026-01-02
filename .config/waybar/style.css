@@ -42,10 +42,10 @@ window#waybar {
     background-color: #303238;
 }
 #custom-hypridle.active {
-    color: #a6e3a1;
+    color: #A6E3A1;
 }
 #custom-hypridle.inactive {
-    color: #f38ba8;
+    color: #F38BA8;
 }
 
 
@@ -138,10 +138,10 @@ window#waybar {
     font-size: 18px;
 }
 #battery.lowpower {
-    color: #FF7300;
+    color: #FAB387;
 }
 #battery.critical {
-    color: #F01414;
+    color: #F38BA8;
 }
 #battery:hover {
     background-color: #303238;
@@ -161,22 +161,22 @@ window#waybar {
     background-color: #1E2127;
 }
 #cpu.light {
-    color: #61ff9b;
+    color: #A6E3A1;
 }
 #cpu.medium {
-    color: #fbff8b;
+    color: #F9E2AF;
 }
 #cpu.heavy {
-    color: #ff88a0;
+    color: #F38BA8;
 }
 #temperature {
     padding-left: 4px;
     padding-right: 4px;
     background-color: #1E2127;
-    color: #A8D8EA;
+    color: #89DCEB;
 }
 #temperature.critical {
-    color: #FF5555;
+    color: #EBA0AC;
 }
 #memory {
     padding-left: 4px;

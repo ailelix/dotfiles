@@ -8,7 +8,7 @@
 
 // Modules
   "backlight": {
-    "format": "<span color=\"#FFCE00\">{icon}</span> {percent}%",
+    "format": "<span color=\"#F9E2AF\">{icon}</span> {percent}%",
     "format-icons": [
       "󱩎",
       "󱩏",
@@ -28,8 +28,8 @@
   },
   
   "battery": {
-    "format": "<span color=\"#07C160\">{icon}</span> {capacity}%",
-    "format-charging": "<span color=\"#07C160\">󰂄</span> {capacity}%",
+    "format": "<span color=\"#A6E3A1\">{icon}</span> {capacity}%",
+    "format-charging": "<span color=\"#A6E3A1\">󰂄</span> {capacity}%",
     "format-charging-critical": "󰂄 {capacity}%",
     "format-charging-lowpower": "󰂄 {capacity}%",
     "format-critical": "󱉞 {capacity}%",
@@ -59,8 +59,8 @@
   },
   
   "bluetooth": {
-    "format-connected": "<span color=\"#0082FC\">󰂱</span> {device_alias}",
-    "format-connected-battery": "<span color=\"#0082FC\">{icon}</span> {device_alias}",
+    "format-connected": "<span color=\"#89B4FA\">󰂱</span> {device_alias}",
+    "format-connected-battery": "<span color=\"#89B4FA\">{icon}</span> {device_alias}",
     "format-disabled": "󰂲",
     "format-icons": [
       "󰤾",
@@ -74,7 +74,7 @@
       "󰥆",
       "󰥈"
     ],
-    "format-on": "<span color=\"#0082FC\">󰂯</span>",
+    "format-on": "<span color=\"#89B4FA\">󰂯</span>",
     "max-length": 16,
     "on-click": "blueman-manager",
     "tooltip-format-connected-battery": "Battery: {device_battery_percentage}%"
@@ -114,14 +114,14 @@
   
   "network#control": {
     "format-disconnected": "󰲜",
-    "format-ethernet": "<span color=\"#80F5D2\"> </span>{ifname}",
-    "format-wifi": "<span color=\"#43E55E\"> </span> {essid}",
+    "format-ethernet": "<span color=\"#89DCEB\"> </span>{ifname}",
+    "format-wifi": "<span color=\"#A6E3A1\"> </span> {essid}",
     "on-click": "nm-connection-editor",
     "tooltip-format": "",
     "tooltip-format-wifi": "Freq: {frequency}Ghz\nSignal: {signalStrength}%"
   },
   "network#info": {
-    "format": "<span foreground=\"#8EA7E9\"> {bandwidthUpBits}</span> <span foreground=\"#FFD3B4\"> {bandwidthDownBits}</span>",
+    "format": "<span foreground=\"#89B4FA\"> {bandwidthUpBits}</span> <span foreground=\"#FFD3B4\"> {bandwidthDownBits}</span>",
     "format-disconnected": "",
     "interval": 10,
     "tooltip": false
@@ -141,12 +141,12 @@
   },
   
   "wireplumber": {
-    "format": "<span color=\"#7F52FF\">{icon}</span> {volume}%",
+    "format": "<span color=\"#CBA6F7\">{icon}</span> {volume}%",
     "format-icons": [
       "",
       " "
     ],
-    "format-muted": "<span color=\"#7F52FF\"> </span> <s>{volume}%</s>",
+    "format-muted": "<span color=\"#CBA6F7\"> </span> <s>{volume}%</s>",
     "on-click": "pwvucontrol",
     "on-click-right": "helvum",
     "on-click-middle": "easyeffects",
