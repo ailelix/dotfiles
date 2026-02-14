@@ -77,6 +77,7 @@ gestures {
 prefer-no-csd
 layout {
     gaps 10
+    background-color "transparent"
 
     center-focused-column "never"
 
@@ -125,20 +126,14 @@ hotkey-overlay {
     hide-not-bound
 }
 
-// spawn-at-startup "waybar"
 spawn-at-startup "dunst"
 spawn-at-startup "fcitx5"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "wl-paste --type text --watch cliphist store"
 spawn-at-startup "wl-paste --type image --watch cliphist store"
 
-// spawn-sh-at-startup "swaybg -i ~/Pictures/Wallpaper/Landscape.png"
+spawn-sh-at-startup "swaybg -i ~/Pictures/Wallpaper/Landscape.png"
 
 
 include "keybinds.kdl"
 include "windowrules.kdl"
-
-debug {
-    render-drm-device "/dev/dri/card1"
-    disable-cursor-plane
-}

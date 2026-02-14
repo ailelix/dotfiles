@@ -209,9 +209,10 @@
   ],
   "modules-left": [
     "custom/os",
+    "niri/workspaces",
     "hyprland/workspaces",
-    "group/apps",
-    "custom/hypridle"
+    "group/apps"
+    // "custom/hypridle"
   ],
   "modules-right": [
     "group/info",

@@ -1,18 +1,18 @@
 [user]
-	name = Felix Chen
-  email = felixchen531@gmail.com
+    name = Felix Chen
+    email = felixchen531@gmail.com
 [core]
-	filemode = false
+    filemode = false
 [tag]
-	forcesignannotated = true
+    forcesignannotated = true
 [color]
-	ui = auto
+    ui = auto
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [credential]
-	helper = /usr/lib/git-core/git-credential-libsecret
+    helper = /usr/lib/git-core/git-credential-libsecret

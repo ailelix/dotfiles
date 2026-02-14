@@ -1,5 +1,5 @@
 binds {
-    Mod+C repeat=false { close-window; }
+    Mod+W repeat=false { close-window; }
     Mod+M { quit; }
 
     Mod+Slash repeat=false { spawn "alacritty"; }
@@ -48,8 +48,8 @@ binds {
     Mod+Shift+Equal { set-window-height "+10%"; }
 
     Mod+Tab repeat=false { toggle-overview; }
-    Mod+G { center-column; }
-    Mod+Shift+G { expand-column-to-available-width; }
+    Mod+C { center-column; }
+    Mod+Shift+C { expand-column-to-available-width; }
     Mod+V { toggle-window-floating; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
@@ -61,9 +61,8 @@ binds {
     XF86AudioMicMute { spawn-sh "swayosd-client --input-volume mute-toggle"; }
     XF86MonBrightnessUp { spawn-sh "swayosd-client --brightness +10"; }
     XF86MonBrightnessDown { spawn-sh "swayosd-client --brightness -10"; }
-    XF86KbdBrightnessUp { spawn-sh "asusctl -k high"; }
-    XF86KbdBrightnessDown { spawn-sh "asusctl -k low"; }
 
-    Mod+Shift+S { screenshot-window write-to-disk=false; }
-    XF86Launch4 { screenshot-screen write-to-disk=false; }
+    Mod+Shift+S { screenshot show-pointer=false; }
+    XF86Launch1 { screenshot-window write-to-disk=false; }
+    Mod+XF86Launch1 { screenshot-screen write-to-disk=false; }
 }
