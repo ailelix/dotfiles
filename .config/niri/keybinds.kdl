@@ -4,6 +4,7 @@ binds {
 
     Mod+Slash repeat=false { spawn "alacritty"; }
     Mod+Return repeat=false { spawn "fuzzel"; }
+    Mod+Shift+Return repeat=false { spawn "cursor-clip"; }
 
     Mod+Left { focus-column-left; }
     Mod+Down { focus-window-or-workspace-down; }
@@ -59,8 +60,8 @@ binds {
     XF86AudioLowerVolume { spawn-sh "swayosd-client --output-volume -2"; }
     XF86AudioMute { spawn-sh "swayosd-client --output-volume mute-toggle"; }
     XF86AudioMicMute { spawn-sh "swayosd-client --input-volume mute-toggle"; }
-    XF86MonBrightnessUp { spawn-sh "swayosd-client --brightness +10"; }
-    XF86MonBrightnessDown { spawn-sh "swayosd-client --brightness -10"; }
+    XF86MonBrightnessUp { spawn-sh "swayosd-client --brightness +5 --device amdgpu_bl1"; }
+    XF86MonBrightnessDown { spawn-sh "swayosd-client --brightness -5 --device amdgpu_bl1"; }
 
     Mod+Shift+S { screenshot show-pointer=false; }
     XF86Launch1 { screenshot-window write-to-disk=false; }

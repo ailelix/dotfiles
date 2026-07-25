@@ -1,6 +1,15 @@
 output "eDP-1" {
     mode "2560x1600@240.000"
+    position x=0 y=1080
     scale 1.2
+
+    variable-refresh-rate
+}
+
+output "ASUSTek COMPUTER INC VG249QM1A S4LMQS082223" {
+    mode "1920x1080@239.76"
+    position x=0 y=0
+    scale 1.0
 
     variable-refresh-rate
 }
@@ -17,7 +26,6 @@ environment {
     QT_QPA_PLATFORM "wayland;xcb"
     QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
     QT_STYLE_OVERRIDE "adwaita-dark"
-    variable-refresh-rate
 
     ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
@@ -129,9 +137,9 @@ hotkey-overlay {
 spawn-at-startup "dunst"
 spawn-at-startup "fcitx5"
 spawn-at-startup "swayosd-server"
-spawn-at-startup "wl-paste --type text --watch cliphist store"
-spawn-at-startup "wl-paste --type image --watch cliphist store"
+spawn-sh-at-startup "cursor-clip --daemon"
 
+//spawn-sh-at-startup "wl-paste --watch cliphist store"
 spawn-sh-at-startup "swaybg -i ~/Pictures/Wallpaper/Landscape.png"
 
 

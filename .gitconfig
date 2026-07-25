@@ -3,6 +3,7 @@
     email = felixchen531@gmail.com
 [core]
     filemode = false
+	autocrlf = input
 [tag]
     forcesignannotated = true
 [color]

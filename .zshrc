@@ -36,6 +36,14 @@ source ~/.local/share/zsh-ssh/zsh-ssh.zsh
 eval "$(zoxide init --cmd cd zsh)"
 # End of Section
 
+# Import $HOME bin path
+export PATH="$HOME/.local/bin:$PATH"
+# End of Section
+
+# Direnv
+# eval "$(direnv hook zsh)"
+# End of Section
+
 # Powerlevel 10k
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # End of Section
